@@ -63,11 +63,16 @@ checkpoints/
 # Jupyter
 .ipynb_checkpoints/
 
+# Large binary files
+*.zip
+*.whl
+*.exe
+*.dll
+*.pyd
+
 # VNpy specific
 .vntrader/
 *.db
 
 # Compiled
 *.pyc
-*.pyd
-*.dll
