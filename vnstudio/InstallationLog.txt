@@ -1,0 +1,338 @@
+************************************* Invoked: 周五 10月 4 13:56:11 2024
+[0] Arguments: E:\tools\vnstudio-2.0.9.exe
+[8] Operations sanity check succeeded.
+[1045] Loaded control script ":/metadata/installer-config/control_qs.qs"
+[1045] Using control script: ":/metadata/installer-config/control_qs.qs"
+[1057] Control script callback "IntroductionPageCallback" does not exist.
+[5141] Control script callback "TargetDirectoryPageCallback" does not exist.
+[98769] Control script callback "LicenseAgreementPageCallback" does not exist.
+[101234] Control script callback "StartMenuDirectoryPageCallback" does not exist.
+[113561] Tmp and install directories are on the same volume. Volume mount point: "C:\\" Free space available: "20.28 GB"
+[113561] Installation space required: "873.03 MB" Temporary space required: "256.00 MB" Local repository size: "0.00 字节"
+[113561] Control script callback "ReadyForInstallationPageCallback" does not exist.
+[115438] Control script callback "PerformInstallationPageCallback" does not exist.
+[115469] backup  operation: Mkdir
+[115469] 	- arguments: C:/vnstudio
+[115469] Done
+[115469] perform  operation: Mkdir
+[115469] 	- arguments: C:/vnstudio
+[115470] Done
+[115470] Install size: 7 components
+[115509] backup python operation: Extract
+[115509] 	- arguments: installer://python/3.7.1content.7z, C:\vnstudio
+[115509] Done
+[115509] perform python operation: Extract
+[115509] 	- arguments: installer://python/3.7.1content.7z, C:\vnstudio
+[115511] Done
+[115511] backup python operation: Extract
+[115511] 	- arguments: installer://python/3.7.1helpers.7z, C:\vnstudio
+[115511] Done
+[115511] perform python operation: Extract
+[115511] 	- arguments: installer://python/3.7.1helpers.7z, C:\vnstudio
+[115518] Done
+[115518] backup python operation: Extract
+[115518] 	- arguments: installer://python/3.7.1python3.7.1.7z, C:\vnstudio
+[115518] Done
+[115518] perform python operation: Extract
+[115518] 	- arguments: installer://python/3.7.1python3.7.1.7z, C:\vnstudio
+[141304] Done
+[141305] backup python operation: Execute
+[141305] 	- arguments: C:\vnstudio/python.exe, -m, pip, install, --no-index, -f, C:\vnstudio/pkgs, --force-reinstall, pip, setuptools
+[141305] Done
+[141305] perform python operation: Execute
+[141305] 	- arguments: C:\vnstudio/python.exe, -m, pip, install, --no-index, -f, C:\vnstudio/pkgs, --force-reinstall, pip, setuptools
+[141351] C:\\vnstudio/python.exe" started, arguments: "-m pip install --no-index -f C:\\vnstudio/pkgs --force-reinstall pip setuptools
+[142547] Looking in links: C:\\vnstudio/pkgs\r\nCollecting pip\r\n
+[142894] Collecting setuptools\r\n
+[143283] Installing collected packages: pip, setuptools\r\n  Found existing installation: pip 10.0.1\r\n
+[143314]     Uninstalling pip-10.0.1:\r\n
+[143947]       Successfully uninstalled pip-10.0.1\r\n
+[150085]   Found existing installation: setuptools 39.0.1\r\n    Uninstalling setuptools-39.0.1:\r\n      Successfully uninstalled setuptools-39.0.1\r\n
+[151721] Successfully installed pip-19.0.3 setuptools-40.8.0\r\n
+[151757] Done
+[151757] backup python operation: License
+[151757] 	- arguments:
+[151757] Done
+[151757] perform python operation: License
+[151757] 	- arguments:
+[151759] Done
+[151759] backup python.prompt_shortcut operation: Extract
+[151759] 	- arguments: installer://python.prompt_shortcut/1.0.0content.7z, C:\vnstudio
+[151759] Done
+[151759] perform python.prompt_shortcut operation: Extract
+[151760] 	- arguments: installer://python.prompt_shortcut/1.0.0content.7z, C:\vnstudio
+[151761] Done
+[151761] backup python.prompt_shortcut operation: Extract
+[151761] 	- arguments: installer://python.prompt_shortcut/1.0.0Scripts.7z, C:\vnstudio
+[151761] Done
+[151761] perform python.prompt_shortcut operation: Extract
+[151761] 	- arguments: installer://python.prompt_shortcut/1.0.0Scripts.7z, C:\vnstudio
+[151765] Done
+[151765] backup python.prompt_shortcut operation: CreateShortcut
+[151765] 	- arguments: C:\Windows\System32\cmd.exe, C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\VN Studio/VN Studio Prompt.lnk, workingDirectory=C:\vnstudio, description=VN Studio Prompt with Python environment, /k C:\vnstudio/Scripts/activate.bat
+[151765] Done
+[151766] perform python.prompt_shortcut operation: CreateShortcut
+[151766] 	- arguments: C:\Windows\System32\cmd.exe, C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\VN Studio/VN Studio Prompt.lnk, /k C:\vnstudio/Scripts/activate.bat
+[151796] Done
+[151797] backup dependents operation: Extract
+[151797] 	- arguments: installer://dependents/2.0.4content.7z, C:\vnstudio
+[151797] Done
+[151797] perform dependents operation: Extract
+[151797] 	- arguments: installer://dependents/2.0.4content.7z, C:\vnstudio
+[151799] Done
+[151799] backup dependents operation: Extract
+[151799] 	- arguments: installer://dependents/2.0.4deps.7z, C:\vnstudio
+[151799] Done
+[151799] perform dependents operation: Extract
+[151799] 	- arguments: installer://dependents/2.0.4deps.7z, C:\vnstudio
+[153130] Done
+[153130] backup dependents operation: Execute
+[153130] 	- arguments: C:\vnstudio/python.exe, -m, pip, install, --no-index, -f, C:\vnstudio/pkgs, -r, C:\vnstudio/pkgs/requirements.txt
+[153130] Done
+[153131] perform dependents operation: Execute
+[153131] 	- arguments: C:\vnstudio/python.exe, -m, pip, install, --no-index, -f, C:\vnstudio/pkgs, -r, C:\vnstudio/pkgs/requirements.txt
+[153141] C:\\vnstudio/python.exe" started, arguments: "-m pip install --no-index -f C:\\vnstudio/pkgs -r C:\\vnstudio/pkgs/requirements.txt
+[153793] Ignoring dataclasses: markers 'python_version <= \"3.6\"' don't match your environment\r\nLooking in links: C:\\vnstudio/pkgs\r\nCollecting PyQt5 (from -r C:\\vnstudio/pkgs/requirements.txt (line 1))\r\n
+[156427] Collecting pyqtgraph (from -r C:\\vnstudio/pkgs/requirements.txt (line 2))\r\n
+[158060] Collecting qdarkstyle (from -r C:\\vnstudio/pkgs/requirements.txt (line 4))\r\nCollecting requests (from -r C:\\vnstudio/pkgs/requirements.txt (line 5))\r\nCollecting websocket-client (from -r C:\\vnstudio/pkgs/requirements.txt (line 6))\r\nCollecting peewee (from -r C:\\vnstudio/pkgs/requirements.txt (line 7))\r\n
+[158708] Collecting pymysql (from -r C:\\vnstudio/pkgs/requirements.txt (line 8))\r\nCollecting psycopg2 (from -r C:\\vnstudio/pkgs/requirements.txt (line 9))\r\nCollecting mongoengine (from -r C:\\vnstudio/pkgs/requirements.txt (line 10))\r\n
+[159342] Collecting numpy (from -r C:\\vnstudio/pkgs/requirements.txt (line 11))\r\n
+[159974] Collecting pandas==0.24.2 (from -r C:\\vnstudio/pkgs/requirements.txt (line 12))\r\n
+[161107] Collecting matplotlib (from -r C:\\vnstudio/pkgs/requirements.txt (line 13))\r\n
+[161419] Collecting seaborn (from -r C:\\vnstudio/pkgs/requirements.txt (line 14))\r\n
+[161430] Collecting futu-api (from -r C:\\vnstudio/pkgs/requirements.txt (line 15))\r\n
+[162063] Collecting tigeropen (from -r C:\\vnstudio/pkgs/requirements.txt (line 16))\r\n
+[162696] Collecting rqdatac (from -r C:\\vnstudio/pkgs/requirements.txt (line 17))\r\nCollecting ta-lib (from -r C:\\vnstudio/pkgs/requirements.txt (line 18))\r\nCollecting ibapi (from -r C:\\vnstudio/pkgs/requirements.txt (line 19))\r\nCollecting deap (from -r C:\\vnstudio/pkgs/requirements.txt (line 20))\r\nCollecting pyzmq (from -r C:\\vnstudio/pkgs/requirements.txt (line 21))\r\n
+[163008] Collecting wmi (from -r C:\\vnstudio/pkgs/requirements.txt (line 22))\r\n
+[163320] Collecting QScintilla (from -r C:\\vnstudio/pkgs/requirements.txt (line 23))\r\nCollecting PyQtWebEngine (from -r C:\\vnstudio/pkgs/requirements.txt (line 25))\r\n
+[164452] Collecting packaging (from -r C:\\vnstudio/pkgs/requirements.txt (line 26))\r\n
+[164483] Collecting click (from -r C:\\vnstudio/pkgs/requirements.txt (line 28))\r\n
+[164555] Collecting easycython (from -r C:\\vnstudio/pkgs/requirements.txt (line 29))\r\nCollecting jupyter (from -r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[164586] Collecting PyQt5_sip<13,>=4.19.19 (from PyQt5->-r C:\\vnstudio/pkgs/requirements.txt (line 1))\r\n
+[164617] Collecting helpdev>=0.6.2 (from qdarkstyle->-r C:\\vnstudio/pkgs/requirements.txt (line 4))\r\n
+[164647] Collecting certifi>=2017.4.17 (from requests->-r C:\\vnstudio/pkgs/requirements.txt (line 5))\r\n
+[164719] Collecting idna<2.9,>=2.5 (from requests->-r C:\\vnstudio/pkgs/requirements.txt (line 5))\r\n
+[164729] Collecting chardet<3.1.0,>=3.0.2 (from requests->-r C:\\vnstudio/pkgs/requirements.txt (line 5))\r\n
+[164800] Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 (from requests->-r C:\\vnstudio/pkgs/requirements.txt (line 5))\r\n
+[164952] Collecting six (from websocket-client->-r C:\\vnstudio/pkgs/requirements.txt (line 6))\r\nCollecting pymongo>=3.4 (from mongoengine->-r C:\\vnstudio/pkgs/requirements.txt (line 10))\r\n
+[165024] Collecting python-dateutil>=2.5.0 (from pandas==0.24.2->-r C:\\vnstudio/pkgs/requirements.txt (line 12))\r\n
+[165097] Collecting pytz>=2011k (from pandas==0.24.2->-r C:\\vnstudio/pkgs/requirements.txt (line 12))\r\n
+[165731] Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 (from matplotlib->-r C:\\vnstudio/pkgs/requirements.txt (line 13))\r\nCollecting kiwisolver>=1.0.1 (from matplotlib->-r C:\\vnstudio/pkgs/requirements.txt (line 13))\r\nCollecting cycler>=0.10 (from matplotlib->-r C:\\vnstudio/pkgs/requirements.txt (line 13))\r\nCollecting scipy>=0.14.0 (from seaborn->-r C:\\vnstudio/pkgs/requirements.txt (line 14))\r\n
+[167364] Collecting simplejson (from futu-api->-r C:\\vnstudio/pkgs/requirements.txt (line 15))\r\n
+[167678] Collecting protobuf==3.5.1 (from futu-api->-r C:\\vnstudio/pkgs/requirements.txt (line 15))\r\n
+[167709] Collecting PyCryptodome (from futu-api->-r C:\\vnstudio/pkgs/requirements.txt (line 15))\r\n
+[168843] Collecting delorean (from tigeropen->-r C:\\vnstudio/pkgs/requirements.txt (line 16))\r\n
+[168916] Collecting pyasn1==0.4.2 (from tigeropen->-r C:\\vnstudio/pkgs/requirements.txt (line 16))\r\n
+[168987] Collecting rsa==4.0 (from tigeropen->-r C:\\vnstudio/pkgs/requirements.txt (line 16))\r\n
+[169018] Collecting stomp.py (from tigeropen->-r C:\\vnstudio/pkgs/requirements.txt (line 16))\r\n
+[170151] Collecting msgpack>=0.5.2 (from rqdatac->-r C:\\vnstudio/pkgs/requirements.txt (line 17))\r\nCollecting PySocks (from rqdatac->-r C:\\vnstudio/pkgs/requirements.txt (line 17))\r\nCollecting SQLAlchemy (from rqdatac->-r C:\\vnstudio/pkgs/requirements.txt (line 17))\r\n
+[172285] Collecting python-rapidjson; python_version > \"3.3\" (from rqdatac->-r C:\\vnstudio/pkgs/requirements.txt (line 17))\r\nCollecting brotli (from rqdatac->-r C:\\vnstudio/pkgs/requirements.txt (line 17))\r\nCollecting cython (from easycython->-r C:\\vnstudio/pkgs/requirements.txt (line 29))\r\nCollecting begins (from easycython->-r C:\\vnstudio/pkgs/requirements.txt (line 29))\r\n
+[172918] Collecting ipywidgets (from jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting jupyter-console (from jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[172929] Collecting notebook (from jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[175066] Collecting nbconvert (from jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[175097] Collecting qtconsole (from jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[175250] Collecting ipykernel (from jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[175321] Collecting importlib-metadata (from helpdev>=0.6.2->qdarkstyle->-r C:\\vnstudio/pkgs/requirements.txt (line 4))\r\n
+[175352] Collecting psutil>=5.6 (from helpdev>=0.6.2->qdarkstyle->-r C:\\vnstudio/pkgs/requirements.txt (line 4))\r\n
+[175423] Requirement already satisfied: setuptools in c:\\vnstudio\\lib\\site-packages (from kiwisolver>=1.0.1->matplotlib->-r C:\\vnstudio/pkgs/requirements.txt (line 13)) (40.8.0)\r\nCollecting babel>=2.1.1 (from delorean->tigeropen->-r C:\\vnstudio/pkgs/requirements.txt (line 16))\r\n
+[176556] Collecting humanize>=0.5.1 (from delorean->tigeropen->-r C:\\vnstudio/pkgs/requirements.txt (line 16))\r\n
+[176707] Collecting tzlocal>=1.2 (from delorean->tigeropen->-r C:\\vnstudio/pkgs/requirements.txt (line 16))\r\nCollecting docopt>=0.6.2 (from stomp.py->tigeropen->-r C:\\vnstudio/pkgs/requirements.txt (line 16))\r\n
+[177340] Collecting traitlets>=4.3.1 (from ipywidgets->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting nbformat>=4.2.0 (from ipywidgets->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting widgetsnbextension~=3.5.0 (from ipywidgets->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[177412] Collecting ipython>=4.0.0; python_version >= \"3.3\" (from ipywidgets->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[177726] Collecting pygments (from jupyter-console->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[178037] Collecting jupyter-client (from jupyter-console->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting prompt-toolkit<2.1.0,>=2.0.0 (from jupyter-console->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[178191] Collecting Send2Trash (from notebook->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[178222] Collecting jupyter-core>=4.6.0 (from notebook->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[178293] Collecting prometheus-client (from notebook->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[178926] Collecting tornado>=5.0 (from notebook->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting jinja2 (from notebook->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting terminado>=0.8.1 (from notebook->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting ipython-genutils (from notebook->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting entrypoints>=0.2.2 (from nbconvert->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting bleach (from nbconvert->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[179077] Collecting mistune<2,>=0.8.1 (from nbconvert->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting pandocfilters>=1.4.1 (from nbconvert->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[179710] Collecting defusedxml (from nbconvert->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting testpath (from nbconvert->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting zipp>=0.5 (from importlib-metadata->helpdev>=0.6.2->qdarkstyle->-r C:\\vnstudio/pkgs/requirements.txt (line 4))\r\nCollecting decorator (from traitlets>=4.3.1->ipywidgets->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting jsonschema!=2.5.0,>=2.4 (from nbformat>=4.2.0->ipywidgets->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting jedi>=0.10 (from ipython>=4.0.0; python_version >= \"3.3\"->ipywidgets->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[180844] Collecting backcall (from ipython>=4.0.0; python_version >= \"3.3\"->ipywidgets->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[180875] Collecting pickleshare (from ipython>=4.0.0; python_version >= \"3.3\"->ipywidgets->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[180906] Collecting colorama; sys_platform == \"win32\" (from ipython>=4.0.0; python_version >= \"3.3\"->ipywidgets->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[180977] Collecting pywin32>=1.0; sys_platform == \"win32\" (from jupyter-client->jupyter-console->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[181612] Collecting wcwidth (from prompt-toolkit<2.1.0,>=2.0.0->jupyter-console->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\nCollecting MarkupSafe>=0.23 (from jinja2->notebook->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[181643] Collecting pywinpty>=0.5; os_name == \"nt\" (from terminado>=0.8.1->notebook->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[181714] Collecting webencodings (from bleach->nbconvert->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[181745] Collecting more-itertools (from zipp>=0.5->importlib-metadata->helpdev>=0.6.2->qdarkstyle->-r C:\\vnstudio/pkgs/requirements.txt (line 4))\r\n
+[181816] Collecting attrs>=17.4.0 (from jsonschema!=2.5.0,>=2.4->nbformat>=4.2.0->ipywidgets->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[181848] Collecting pyrsistent>=0.14.0 (from jsonschema!=2.5.0,>=2.4->nbformat>=4.2.0->ipywidgets->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[182480] Collecting parso>=0.5.0 (from jedi>=0.10->ipython>=4.0.0; python_version >= \"3.3\"->ipywidgets->jupyter->-r C:\\vnstudio/pkgs/requirements.txt (line 30))\r\n
+[182793] Installing collected packages: PyQt5-sip, PyQt5, numpy, pyqtgraph, more-itertools, zipp, importlib-metadata, psutil, helpdev, qdarkstyle, certifi, idna, chardet, urllib3, requests, six, websocket-client, peewee, pymysql, psycopg2, pymongo, mongoengine, python-dateutil, pytz, pandas, pyparsing, kiwisolver, cycler, matplotlib, scipy, seaborn, simplejson, protobuf, PyCryptodome, futu-api, babel, humanize, tzlocal, delorean, pyasn1, rsa, docopt, stomp.py, tigeropen, msgpack, PySocks, SQLAlchemy, python-rapidjson, brotli, rqdatac, ta-lib, ibapi, deap, pyzmq, wmi, QScintilla, PyQtWebEngine, packaging, click, cython, begins, easycython, decorator, ipython-genutils, traitlets, attrs, pyrsistent, jsonschema, pywin32, jupyter-core, nbformat, Send2Trash, prometheus-client, tornado, jupyter-client, entrypoints, webencodings, bleach, mistune, pygments, pandocfilters, defusedxml, testpath, MarkupSafe, jinja2, nbconvert, pywinpty, terminado, parso, jedi, backcall, pickleshare, colorama, wcwidth, prompt-toolkit, ipython, ipykernel, notebook, widgetsnbextension, ipywidgets, jupyter-console, qtconsole, jupyter\r\n
+[203079]   Running setup.py install for pyqtgraph: started\r\n
+[210720]     Running setup.py install for pyqtgraph: finished with status 'done'\r\n
+[214775]   Running setup.py install for peewee: started\r\n
+[215908]     Running setup.py install for peewee: finished with status 'done'\r\n
+[218042]   Running setup.py install for mongoengine: started\r\n
+[222178]     Running setup.py install for mongoengine: finished with status 'done'\r\n
+[262355]   Running setup.py install for simplejson: started\r\n
+[263488]     Running setup.py install for simplejson: finished with status 'done'\r\n
+[272131]   Running setup.py install for futu-api: started\r\n
+[276267]     Running setup.py install for futu-api: finished with status 'done'\r\n
+[282905]   Running setup.py install for humanize: started\r\n
+[283057]     Running setup.py install for humanize: finished with status 'done'\r\n
+[283209]   Running setup.py install for delorean: started\r\n
+[283843]     Running setup.py install for delorean: finished with status 'done'\r\n
+[284790]   Running setup.py install for docopt: started\r\n
+[285102]     Running setup.py install for docopt: finished with status 'done'\r\n  Running setup.py install for stomp.py: started\r\n
+[286235]     Running setup.py install for stomp.py: finished with status 'done'\r\n  Running setup.py install for tigeropen: started\r\n
+[287868]     Running setup.py install for tigeropen: finished with status 'done'\r\n  Running setup.py install for SQLAlchemy: started\r\n
+[295010]     Running setup.py install for SQLAlchemy: finished with status 'done'\r\n
+[299148]   Running setup.py install for wmi: started\r\n
+[299300]     Running setup.py install for wmi: finished with status 'done'\r\n
+[306439]   Running setup.py install for begins: started\r\n
+[307073]     Running setup.py install for begins: finished with status 'done'\r\n
+[308206]   Running setup.py install for pyrsistent: started\r\n
+[309341]     Running setup.py install for pyrsistent: finished with status 'done'\r\n
+[321117]   Running setup.py install for prometheus-client: started\r\n
+[322251]     Running setup.py install for prometheus-client: finished with status 'done'\r\n
+[329024]   Running setup.py install for pandocfilters: started\r\n
+[329177]     Running setup.py install for pandocfilters: finished with status 'done'\r\n
+[342956]   Running setup.py install for backcall: started\r\n
+[343029]     Running setup.py install for backcall: finished with status 'done'\r\n
+[376101] Successfully installed MarkupSafe-1.1.1 PyCryptodome-3.9.3 PyQt5-5.13.2 PyQt5-sip-12.7.0 PyQtWebEngine-5.13.2 PySocks-1.7.1 QScintilla-2.11.3 SQLAlchemy-1.3.11 Send2Trash-1.5.0 attrs-19.3.0 babel-2.7.0 backcall-0.1.0 begins-0.9 bleach-3.1.0 brotli-1.0.7 certifi-2019.9.11 chardet-3.0.4 click-7.0 colorama-0.4.1 cycler-0.10.0 cython-0.29.14 deap-1.3.0 decorator-4.4.1 defusedxml-0.6.0 delorean-1.0.0 docopt-0.6.2 easycython-1.0.7 entrypoints-0.3 futu-api-3.15.0 helpdev-0.6.10 humanize-0.5.1 ibapi-9.75.1 idna-2.8 importlib-metadata-0.23 ipykernel-5.1.3 ipython-7.9.0 ipython-genutils-0.2.0 ipywidgets-7.5.1 jedi-0.15.1 jinja2-2.10.3 jsonschema-3.1.1 jupyter-1.0.0 jupyter-client-5.3.4 jupyter-console-6.0.0 jupyter-core-4.6.1 kiwisolver-1.1.0 matplotlib-3.1.1 mistune-0.8.4 mongoengine-0.18.2 more-itertools-7.2.0 msgpack-0.6.2 nbconvert-5.6.1 nbformat-4.4.0 notebook-6.0.2 numpy-1.15.4 packaging-19.2 pandas-0.24.2 pandocfilters-1.4.2 parso-0.5.1 peewee-3.11.2 pickleshare-0.7.5 prometheus-client-0.7.1 prompt-toolkit-2.0.10 protobuf-3.5.1 psutil-5.6.5 psycopg2-2.8.4 pyasn1-0.4.2 pygments-2.4.2 pymongo-3.9.0 pymysql-0.9.3 pyparsing-2.4.5 pyqtgraph-0.10.0 pyrsistent-0.15.5 python-dateutil-2.8.1 python-rapidjson-0.9.1 pytz-2019.3 pywin32-227 pywinpty-0.5.5 pyzmq-18.1.1 qdarkstyle-2.7 qtconsole-4.5.5 requests-2.22.0 rqdatac-2.5.3 rsa-4.0 scipy-1.3.2 seaborn-0.9.0 simplejson-3.16.0 six-1.13.0 stomp.py-4.1.22 ta-lib-0.4.17 terminado-0.8.3 testpath-0.4.4 tigeropen-1.1.9 tornado-6.0.3 traitlets-4.3.3 tzlocal-2.0.0 urllib3-1.25.7 wcwidth-0.1.7 webencodings-0.5.1 websocket-client-0.56.0 widgetsnbextension-3.5.1 wmi-1.4.9 zipp-0.6.0\r\n
+[380348] Done
+[380348] backup dependents operation: Execute
+[380348] 	- arguments: cmd.exe, /c, rmdir, /S, /Q, C:\vnstudio\pkgs
+[380348] Done
+[380348] perform dependents operation: Execute
+[380348] 	- arguments: cmd.exe, /c, rmdir, /S, /Q, C:\vnstudio\pkgs
+[380366] cmd.exe" started, arguments: "/c rmdir /S /Q C:\\vnstudio\\pkgs
+[380460] Done
+[380460] backup dependents operation: Copy
+[380460] 	- arguments: C:\vnstudio\DLLs/libcrypto-1_1-x64.dll, C:\vnstudio
+[380460] Done
+[380460] perform dependents operation: Copy
+[380460] 	- arguments: C:\vnstudio\DLLs/libcrypto-1_1-x64.dll, C:\vnstudio
+[380466] Done
+[380466] backup dependents operation: Copy
+[380466] 	- arguments: C:\vnstudio\DLLs/libssl-1_1-x64.dll, C:\vnstudio
+[380466] Done
+[380466] perform dependents operation: Copy
+[380466] 	- arguments: C:\vnstudio\DLLs/libssl-1_1-x64.dll, C:\vnstudio
+[380467] Done
+[380468] backup dependents operation: Copy
+[380468] 	- arguments: C:\vnstudio\Lib/site-packages/PyQt5/Qt/bin/libeay32.dll, C:\vnstudio
+[380468] Done
+[380468] perform dependents operation: Copy
+[380468] 	- arguments: C:\vnstudio\Lib/site-packages/PyQt5/Qt/bin/libeay32.dll, C:\vnstudio
+[380470] Done
+[380470] backup dependents operation: Copy
+[380470] 	- arguments: C:\vnstudio\Lib/site-packages/PyQt5/Qt/bin/ssleay32.dll, C:\vnstudio
+[380470] Done
+[380471] perform dependents operation: Copy
+[380471] 	- arguments: C:\vnstudio\Lib/site-packages/PyQt5/Qt/bin/ssleay32.dll, C:\vnstudio
+[380472] Done
+[380473] backup vnpy operation: Extract
+[380473] 	- arguments: installer://vnpy/2content.7z, C:\vnstudio
+[380473] Done
+[380473] perform vnpy operation: Extract
+[380473] 	- arguments: installer://vnpy/2content.7z, C:\vnstudio
+[380475] Done
+[380476] backup vnpy operation: Extract
+[380476] 	- arguments: installer://vnpy/2vnpy.7z, C:\vnstudio
+[380476] Done
+[380476] perform vnpy operation: Extract
+[380476] 	- arguments: installer://vnpy/2vnpy.7z, C:\vnstudio
+[387370] Done
+[387370] backup vnpy operation: Execute
+[387370] 	- arguments: C:\vnstudio/python.exe, -m, pip, install, --no-index, -f, C:\vnstudio/pkgs, C:\vnstudio/vnpy
+[387370] Done
+[387370] perform vnpy operation: Execute
+[387370] 	- arguments: C:\vnstudio/python.exe, -m, pip, install, --no-index, -f, C:\vnstudio/pkgs, C:\vnstudio/vnpy
+[387380] C:\\vnstudio/python.exe" started, arguments: "-m pip install --no-index -f C:\\vnstudio/pkgs C:\\vnstudio/vnpy
+[388410] Looking in links: C:\\vnstudio/pkgs\r\nProcessing c:\\vnstudio\\vnpy\r\n
+[396215] Requirement already satisfied: PyQt5 in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (5.13.2)\r\nRequirement already satisfied: qdarkstyle in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (2.7)\r\nRequirement already satisfied: requests in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (2.22.0)\r\nRequirement already satisfied: websocket-client in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (0.56.0)\r\nRequirement already satisfied: peewee in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (3.11.2)\r\nRequirement already satisfied: pymysql in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (0.9.3)\r\nRequirement already satisfied: mongoengine in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (0.18.2)\r\nRequirement already satisfied: numpy in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (1.15.4)\r\nRequirement already satisfied: pandas in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (0.24.2)\r\nRequirement already satisfied: matplotlib in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (3.1.1)\r\nRequirement already satisfied: seaborn in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (0.9.0)\r\nRequirement already satisfied: futu-api in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (3.15.0)\r\nRequirement already satisfied: tigeropen in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (1.1.9)\r\nRequirement already satisfied: rqdatac in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (2.5.3)\r\nRequirement already satisfied: ta-lib in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (0.4.17)\r\nRequirement already satisfied: ibapi in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (9.75.1)\r\nRequirement already satisfied: deap in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (1.3.0)\r\nRequirement already satisfied: pyzmq in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (18.1.1)\r\nRequirement already satisfied: QScintilla in c:\\vnstudio\\lib\\site-packages (from vnpy==2.0.9) (2.11.3)\r\nRequirement already satisfied: PyQt5_sip<13,>=4.19.19 in c:\\vnstudio\\lib\\site-packages (from PyQt5->vnpy==2.0.9) (12.7.0)\r\nRequirement already satisfied: helpdev>=0.6.2 in c:\\vnstudio\\lib\\site-packages (from qdarkstyle->vnpy==2.0.9) (0.6.10)\r\nRequirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in c:\\vnstudio\\lib\\site-packages (from requests->vnpy==2.0.9) (1.25.7)\r\nRequirement already satisfied: chardet<3.1.0,>=3.0.2 in c:\\vnstudio\\lib\\site-packages (from requests->vnpy==2.0.9) (3.0.4)\r\nRequirement already satisfied: idna<2.9,>=2.5 in c:\\vnstudio\\lib\\site-packages (from requests->vnpy==2.0.9) (2.8)\r\nRequirement already satisfied: certifi>=2017.4.17 in c:\\vnstudio\\lib\\site-packages (from requests->vnpy==2.0.9) (2019.9.11)\r\nRequirement already satisfied: six in c:\\vnstudio\\lib\\site-packages (from websocket-client->vnpy==2.0.9) (1.13.0)\r\nRequirement already satisfied: pymongo>=3.4 in c:\\vnstudio\\lib\\site-packages (from mongoengine->vnpy==2.0.9) (3.9.0)\r\nRequirement already satisfied: pytz>=2011k in c:\\vnstudio\\lib\\site-packages (from pandas->vnpy==2.0.9) (2019.3)\r\n
+[396225] Requirement already satisfied: python-dateutil>=2.5.0 in c:\\vnstudio\\lib\\site-packages (from pandas->vnpy==2.0.9) (2.8.1)\r\n
+[396235] Requirement already satisfied: cycler>=0.10 in c:\\vnstudio\\lib\\site-packages (from matplotlib->vnpy==2.0.9) (0.10.0)\r\n
+[396246] Requirement already satisfied: kiwisolver>=1.0.1 in c:\\vnstudio\\lib\\site-packages (from matplotlib->vnpy==2.0.9) (1.1.0)\r\n
+[396257] Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in c:\\vnstudio\\lib\\site-packages (from matplotlib->vnpy==2.0.9) (2.4.5)\r\n
+[396267] Requirement already satisfied: scipy>=0.14.0 in c:\\vnstudio\\lib\\site-packages (from seaborn->vnpy==2.0.9) (1.3.2)\r\n
+[396278] Requirement already satisfied: simplejson in c:\\vnstudio\\lib\\site-packages (from futu-api->vnpy==2.0.9) (3.16.0)\r\nRequirement already satisfied: protobuf==3.5.1 in c:\\vnstudio\\lib\\site-packages (from futu-api->vnpy==2.0.9) (3.5.1)\r\n
+[396289] Requirement already satisfied: PyCryptodome in c:\\vnstudio\\lib\\site-packages (from futu-api->vnpy==2.0.9) (3.9.3)\r\n
+[396300] Requirement already satisfied: delorean in c:\\vnstudio\\lib\\site-packages (from tigeropen->vnpy==2.0.9) (1.0.0)\r\n
+[396310] Requirement already satisfied: pyasn1==0.4.2 in c:\\vnstudio\\lib\\site-packages (from tigeropen->vnpy==2.0.9) (0.4.2)\r\n
+[396321] Requirement already satisfied: rsa==4.0 in c:\\vnstudio\\lib\\site-packages (from tigeropen->vnpy==2.0.9) (4.0)\r\n
+[396332] Requirement already satisfied: stomp.py in c:\\vnstudio\\lib\\site-packages (from tigeropen->vnpy==2.0.9) (4.1.22)\r\nRequirement already satisfied: PySocks in c:\\vnstudio\\lib\\site-packages (from rqdatac->vnpy==2.0.9) (1.7.1)\r\n
+[396343] Requirement already satisfied: msgpack>=0.5.2 in c:\\vnstudio\\lib\\site-packages (from rqdatac->vnpy==2.0.9) (0.6.2)\r\n
+[396354] Requirement already satisfied: SQLAlchemy in c:\\vnstudio\\lib\\site-packages (from rqdatac->vnpy==2.0.9) (1.3.11)\r\n
+[396364] Requirement already satisfied: python-rapidjson; python_version > \"3.3\" in c:\\vnstudio\\lib\\site-packages (from rqdatac->vnpy==2.0.9) (0.9.1)\r\n
+[396394] Requirement already satisfied: brotli in c:\\vnstudio\\lib\\site-packages (from rqdatac->vnpy==2.0.9) (1.0.7)\r\nRequirement already satisfied: psutil>=5.6 in c:\\vnstudio\\lib\\site-packages (from helpdev>=0.6.2->qdarkstyle->vnpy==2.0.9) (5.6.5)\r\n
+[396405] Requirement already satisfied: importlib-metadata in c:\\vnstudio\\lib\\site-packages (from helpdev>=0.6.2->qdarkstyle->vnpy==2.0.9) (0.23)\r\n
+[396415] Requirement already satisfied: setuptools in c:\\vnstudio\\lib\\site-packages (from kiwisolver>=1.0.1->matplotlib->vnpy==2.0.9) (40.8.0)\r\n
+[396425] Requirement already satisfied: babel>=2.1.1 in c:\\vnstudio\\lib\\site-packages (from delorean->tigeropen->vnpy==2.0.9) (2.7.0)\r\n
+[396435] Requirement already satisfied: humanize>=0.5.1 in c:\\vnstudio\\lib\\site-packages (from delorean->tigeropen->vnpy==2.0.9) (0.5.1)\r\nRequirement already satisfied: tzlocal>=1.2 in c:\\vnstudio\\lib\\site-packages (from delorean->tigeropen->vnpy==2.0.9) (2.0.0)\r\n
+[396446] Requirement already satisfied: docopt>=0.6.2 in c:\\vnstudio\\lib\\site-packages (from stomp.py->tigeropen->vnpy==2.0.9) (0.6.2)\r\nRequirement already satisfied: zipp>=0.5 in c:\\vnstudio\\lib\\site-packages (from importlib-metadata->helpdev>=0.6.2->qdarkstyle->vnpy==2.0.9) (0.6.0)\r\n
+[396457] Requirement already satisfied: more-itertools in c:\\vnstudio\\lib\\site-packages (from zipp>=0.5->importlib-metadata->helpdev>=0.6.2->qdarkstyle->vnpy==2.0.9) (7.2.0)\r\n
+[397092] Installing collected packages: vnpy\r\n  Running setup.py install for vnpy: started\r\n
+[439277]     Running setup.py install for vnpy: finished with status 'done'\r\n
+[440235] Successfully installed vnpy-2.0.9\r\n
+[440236] Done
+[440236] backup vnpy operation: Execute
+[440236] 	- arguments: cmd.exe, /c, rmdir, /S, /Q, C:\vnstudio\vnpy
+[440236] Done
+[440236] perform vnpy operation: Execute
+[440236] 	- arguments: cmd.exe, /c, rmdir, /S, /Q, C:\vnstudio\vnpy
+[440250] cmd.exe" started, arguments: "/c rmdir /S /Q C:\\vnstudio\\vnpy
+[440733] Done
+[440734] backup vnstation operation: Extract
+[440734] 	- arguments: installer://vnstation/2.2.3content.7z, C:\vnstudio
+[440734] Done
+[440734] perform vnstation operation: Extract
+[440734] 	- arguments: installer://vnstation/2.2.3content.7z, C:\vnstudio
+[440736] Done
+[440736] backup vnstation operation: Extract
+[440736] 	- arguments: installer://vnstation/2.2.3vnstation.7z, C:\vnstudio
+[440736] Done
+[440737] perform vnstation operation: Extract
+[440737] 	- arguments: installer://vnstation/2.2.3vnstation.7z, C:\vnstudio
+[440772] Done
+[440772] backup vnstation operation: Execute
+[440772] 	- arguments: C:\vnstudio/python.exe, -m, pip, install, --no-index, -f, C:\vnstudio/pkgs, C:\vnstudio/vnstation
+[440772] Done
+[440772] perform vnstation operation: Execute
+[440772] 	- arguments: C:\vnstudio/python.exe, -m, pip, install, --no-index, -f, C:\vnstudio/pkgs, C:\vnstudio/vnstation
+[440784] C:\\vnstudio/python.exe" started, arguments: "-m pip install --no-index -f C:\\vnstudio/pkgs C:\\vnstudio/vnstation
+[441440] Looking in links: C:\\vnstudio/pkgs\r\nProcessing c:\\vnstudio\\vnstation\r\n
+[442074] Requirement already satisfied: packaging in c:\\vnstudio\\lib\\site-packages (from vnstation==2.4.6) (19.2)\r\nRequirement already satisfied: click in c:\\vnstudio\\lib\\site-packages (from vnstation==2.4.6) (7.0)\r\nRequirement already satisfied: requests in c:\\vnstudio\\lib\\site-packages (from vnstation==2.4.6) (2.22.0)\r\nRequirement already satisfied: PyQt5 in c:\\vnstudio\\lib\\site-packages (from vnstation==2.4.6) (5.13.2)\r\nRequirement already satisfied: PyQtWebEngine in c:\\vnstudio\\lib\\site-packages (from vnstation==2.4.6) (5.13.2)\r\nRequirement already satisfied: easycython in c:\\vnstudio\\lib\\site-packages (from vnstation==2.4.6) (1.0.7)\r\nRequirement already satisfied: six in c:\\vnstudio\\lib\\site-packages (from packaging->vnstation==2.4.6) (1.13.0)\r\nRequirement already satisfied: pyparsing>=2.0.2 in c:\\vnstudio\\lib\\site-packages (from packaging->vnstation==2.4.6) (2.4.5)\r\nRequirement already satisfied: chardet<3.1.0,>=3.0.2 in c:\\vnstudio\\lib\\site-packages (from requests->vnstation==2.4.6) (3.0.4)\r\nRequirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in c:\\vnstudio\\lib\\site-packages (from requests->vnstation==2.4.6) (1.25.7)\r\nRequirement already satisfied: certifi>=2017.4.17 in c:\\vnstudio\\lib\\site-packages (from requests->vnstation==2.4.6) (2019.9.11)\r\nRequirement already satisfied: idna<2.9,>=2.5 in c:\\vnstudio\\lib\\site-packages (from requests->vnstation==2.4.6) (2.8)\r\nRequirement already satisfied: PyQt5_sip<13,>=4.19.19 in c:\\vnstudio\\lib\\site-packages (from PyQt5->vnstation==2.4.6) (12.7.0)\r\nRequirement already satisfied: cython in c:\\vnstudio\\lib\\site-packages (from easycython->vnstation==2.4.6) (0.29.14)\r\nRequirement already satisfied: numpy in c:\\vnstudio\\lib\\site-packages (from easycython->vnstation==2.4.6) (1.15.4)\r\nRequirement already satisfied: begins in c:\\vnstudio\\lib\\site-packages (from easycython->vnstation==2.4.6) (0.9)\r\n
+[442145] Installing collected packages: vnstation\r\n  Running setup.py install for vnstation: started\r\n
+[443010]     Running setup.py install for vnstation: finished with status 'done'\r\nSuccessfully installed vnstation-2.4.6\r\n
+[443010] Done
+[443010] backup vnstation operation: CreateShortcut
+[443010] 	- arguments: C:\vnstudio/Scripts/vnstation.exe, C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\VN Studio/vnstation.lnk, workingDirectory=C:\vnstudio, iconPath=C:\vnstudio/vnpy.ico
+[443010] Done
+[443010] perform vnstation operation: CreateShortcut
+[443010] 	- arguments: C:\vnstudio/Scripts/vnstation.exe, C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\VN Studio/vnstation.lnk
+[443100] Done
+[443100] backup vnstation operation: Execute
+[443100] 	- arguments: cmd.exe, /c, rmdir, /S, /Q, C:\vnstudio\vnstation
+[443100] Done
+[443100] perform vnstation operation: Execute
+[443100] 	- arguments: cmd.exe, /c, rmdir, /S, /Q, C:\vnstudio\vnstation
+[443118] cmd.exe" started, arguments: "/c rmdir /S /Q C:\\vnstudio\\vnstation
+[443162] Done
+[443164] backup python.sys_path operation: Extract
+[443164] 	- arguments: installer://python.sys_path/1.0.0content.7z, C:\vnstudio
+[443164] Done
+[443164] perform python.sys_path operation: Extract
+[443164] 	- arguments: installer://python.sys_path/1.0.0content.7z, C:\vnstudio
+[443166] Done
+[443166] "Execute" as admin: true
+[443166] backup python.sys_path operation: Execute
+[443166] 	- arguments: C:\vnstudio/python.exe, C:\vnstudio/helpers/add_into_sys_path.py, workingdirectory=C:\vnstudio/helpers, UNDOEXECUTE, C:\vnstudio/python.exe, C:\vnstudio/helpers/remove_from_sys_path.py, workingdirectory=C:\vnstudio/helpers
+[443166] Done
+[443166] perform python.sys_path operation: Execute
+[443166] 	- arguments: C:\vnstudio/python.exe, C:\vnstudio/helpers/add_into_sys_path.py, workingdirectory=C:\vnstudio/helpers, UNDOEXECUTE, C:\vnstudio/python.exe, C:\vnstudio/helpers/remove_from_sys_path.py, workingdirectory=C:\vnstudio/helpers
+[443166] ElevatedExecuteOperation setWorkingDirectory: "C:\\vnstudio/helpers"
+[443175] C:\\vnstudio/python.exe" started, arguments: "C:\\vnstudio/helpers/add_into_sys_path.py
+[443269] Done
+[443270] backup vnstation.desktop_shortcut operation: CreateShortcut
+[443270] 	- arguments: C:\vnstudio/Scripts/vnstation.exe, C:\Users\Administrator\Desktop/VN Station.lnk, workingDirectory=C:\vnstudio, iconPath=C:\vnstudio/vnpy.ico
+[443270] Done
+[443270] perform vnstation.desktop_shortcut operation: CreateShortcut
+[443270] 	- arguments: C:\vnstudio/Scripts/vnstation.exe, C:\Users\Administrator\Desktop/VN Station.lnk
+[443290] Done
+[443299] Writing maintenance tool: "C:\\vnstudio/maintenancetool.exe.new"
+[444494] Wrote permissions for maintenance tool.
+[444959] Maintenance tool restart: false.
+[444978] Control script callback "FinishedPageCallback" does not exist.

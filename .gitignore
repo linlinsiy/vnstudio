@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Secrets
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# Data files (large)
+*.csv
+*.parquet
+
+# Models (large)
+*.h5
+*.pkl
+*.pickle
+*.pt
+*.pth
+models/
+checkpoints/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VNpy specific
+.vntrader/
+*.db
+
+# Compiled
+*.pyc
+*.pyd
+*.dll

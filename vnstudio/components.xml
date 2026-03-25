@@ -1,0 +1,81 @@
+<Packages>
+    <ApplicationName>VN Studio</ApplicationName>
+    <ApplicationVersion>1.0.0</ApplicationVersion>
+    <Package>
+        <Name>dependents</Name>
+        <Title>dependents package collation</Title>
+        <Description>package collation</Description>
+        <Version>2.0.4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2024-10-04</InstallDate>
+        <Size>236880809</Size>
+        <Dependencies>python</Dependencies>
+        <ForcedInstallation>true</ForcedInstallation>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>python</Name>
+        <Title>Python 3.7.1</Title>
+        <Description>Python 3.7.1</Description>
+        <Version>3.7.1</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2024-10-04</InstallDate>
+        <Size>146908051</Size>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+    <Package>
+        <Name>python.prompt_shortcut</Name>
+        <Title>Start Menu: Command Tools</Title>
+        <Description>Add Python Command Tools into start menu</Description>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2024-10-04</InstallDate>
+        <Size>5329</Size>
+        <ForcedInstallation>true</ForcedInstallation>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>python.sys_path</Name>
+        <Title>Add To PATH for all users</Title>
+        <Description>Add Python to PATH for all users</Description>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2024-10-04</InstallDate>
+        <Size>40</Size>
+        <Dependencies>python</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>vnpy</Name>
+        <Title>vnpy</Title>
+        <Description>vnpy</Description>
+        <Version>2</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2024-10-04</InstallDate>
+        <Size>262994334</Size>
+        <Dependencies>python,dependents</Dependencies>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+    <Package>
+        <Name>vnstation</Name>
+        <Title>vnstation</Title>
+        <Description>vnstation</Description>
+        <Version>2.2.3</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2024-10-04</InstallDate>
+        <Size>214792</Size>
+        <Dependencies>python,dependents</Dependencies>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+    <Package>
+        <Name>vnstation.desktop_shortcut</Name>
+        <Title>vnstation desktop shortcut</Title>
+        <Description>vnstation desktop shortcut</Description>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2024-10-04</InstallDate>
+        <Size>0</Size>
+        <Dependencies>python,vnstation</Dependencies>
+        <Checkable>true</Checkable>
+    </Package>
+</Packages>
