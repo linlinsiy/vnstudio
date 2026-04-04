@@ -16,6 +16,7 @@ from vnpy.app.csv_loader import CsvLoaderApp
 from vnpy.app.data_recorder import DataRecorderApp
 from vnpy.app.data_recorder.engine import EVENT_RECORDER_LOG
 
+from safe_mode import enable_read_only_mode
 
 
 
@@ -55,6 +56,7 @@ def main():
 
     event_engine = EventEngine()
     main_engine = MainEngine(event_engine)
+    enable_read_only_mode(main_engine)
     main_engine.add_gateway(CtpGateway)
 
     main_engine.add_gateway(SinaGateway)
