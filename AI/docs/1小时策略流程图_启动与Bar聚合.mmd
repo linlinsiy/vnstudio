@@ -1,0 +1,34 @@
+flowchart TD
+    A[on_init] --> A1[load_bar initDays, Interval.HOUR]
+    A1 --> A2[预热小时历史数据]
+
+    A2 --> B[on_start]
+    B --> B1[恢复 StateInfoData]
+    B --> B2[恢复最近两笔 PredictData.furMomentum]
+    B --> B3[恢复 TradingInfoData]
+
+    B3 --> C[on_tick]
+    C --> C1[bg.update_tick, 推动 bar 聚合]
+    C --> C2[检查 tradingInfoList]
+    C2 --> C3{委托是否超时或首次发送}
+    C3 -- 是 --> C4[撤单 / 重发 buy short sell cover]
+    C3 -- 否 --> C5[继续]
+
+    C1 --> D[on_bar]
+    D --> D1{回测或初始化阶段?}
+    D1 -- 是 --> D2[允许 direct_play/newWinOpened]
+    D1 -- 否 --> D3[按实盘动态聚合]
+    D2 --> D4[bg.update_bar]
+    D3 --> D4[bg.update_bar]
+
+    D4 --> E[on_sixty_bar]
+    E --> E1[am.update_bar]
+    E1 --> E2[isDateEnd 判断是否日线收口]
+    E2 --> E3{是否日线收口}
+    E3 -- 是 --> E4[dam.update_bar, BarIdx_D加1]
+    E3 -- 否 --> E5[跳过日线更新]
+    E4 --> F
+    E5 --> F
+
+    F{am/dam 是否初始化完成} -->|否| Z[直接返回]
+    F -->|是| G[进入指标与信号计算主流程]

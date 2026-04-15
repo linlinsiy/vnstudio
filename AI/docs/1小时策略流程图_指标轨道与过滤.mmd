@@ -1,0 +1,33 @@
+flowchart TD
+    A[进入 on_sixty_bar 主计算] --> A1[必要时读取 VirtualPosData]
+    A1 --> A2[读取 SignInterfaceData]
+    A2 --> A3[允许动态调整 bandOffset]
+
+    A3 --> B[计算小时指标]
+    B --> B1[SMA 5 10 20 30 40 50 60 100]
+    B --> B2[ATR 10 30 60]
+    B --> B3[STD 10 30 50 60 100]
+    B --> B4[CCI / RSI 观察值]
+
+    B4 --> C[计算日线指标]
+    C --> C1[SMA 5 10 20]
+    C --> C2[STD 10 20]
+    C --> C3[ATR / CCI 观察值]
+
+    C3 --> D[计算观察动量]
+    D --> D1[obvMomentum]
+    D --> D2[obvMomentum_D]
+
+    D2 --> E[映射四套轨道位置]
+    E --> E1[日线 20 日轨道 curLoc_D]
+    E --> E2[长期 100 小时轨道 curLoc_L]
+    E --> E3[中期 50 小时轨道 curLoc]
+    E --> E4[短期 30 小时轨道 curLoc_S]
+
+    E4 --> F[计算大级别过滤]
+    F --> F1[cond_D 日线过滤]
+    F --> F2[quietBreak_D 平静突破识别]
+    F --> F3[cond_STD 小时波动过滤]
+    F --> F4[cond_STD2 / cond_STD3 当前被屏蔽]
+
+    F4 --> G[输出给状态机]

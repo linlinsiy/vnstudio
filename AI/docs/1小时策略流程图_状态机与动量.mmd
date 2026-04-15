@@ -1,0 +1,49 @@
+flowchart TD
+    A[读取 curLoc / cond_D / cond_STD] --> B[生成预状态 ActorStatus]
+
+    B --> B1[长期趋势 L]
+    B1 --> B11[A_PRE_UT1_UP_UPLINE_L]
+    B1 --> B12[A_PRE_DT1_DN_DNLINE_L]
+
+    B --> B2[中期趋势 UT5~UT1 / DT5~DT1]
+    B2 --> B21[A_PRE_UT5/4/3/2/1]
+    B2 --> B22[A_PRE_DT5/4/3/2/1]
+
+    B --> B3[日线趋势 D]
+    B3 --> B31[A_PRE_UT1_UP_UPLINE_D]
+    B3 --> B32[A_PRE_DT1_DN_DNLINE_D]
+
+    B --> B4[短期突破 S]
+    B4 --> B41[A_PRE_UT0_UP_UPLINE_S]
+    B4 --> B42[A_PRE_DT0_DN_DNLINE_S]
+
+    B --> B5[转折趋势 T / T0]
+    B5 --> B51[A_PRE_UT0_UP_UPLINE_T]
+    B5 --> B52[A_PRE_DT0_DN_DNLINE_T]
+    B5 --> B53[A_UT0_UP_UPLINE_T0 / A_DT0_DN_DNLINE_T0]
+
+    B --> B6[平静突破 QUIET]
+    B6 --> B61[A_PRE_QUIET_UP_BREAK]
+    B6 --> B62[A_PRE_QUIET_DOWN_BREAK]
+
+    B61 --> C[根据 50 小时均线判断 runningStage]
+    B62 --> C
+    B11 --> C
+    B21 --> C
+    B31 --> C
+    B41 --> C
+    B51 --> C
+
+    C --> D[按 ActorStatus 选择 evlMomentum 公式]
+    D --> D1[计算 majorMomentum / supMomentum]
+    D1 --> D2[计算 evlStep / trackStep]
+    D2 --> D3[计算 evlCo]
+    D3 --> D4[得到 evlMomentum]
+    D4 --> D5[得到 curThreshold]
+
+    D5 --> E[按 defender 与轨道类型计算 stopLossPrice]
+    E --> F{evlMomentum 是否越过阈值}
+    F -- 否 --> G[保持预状态 / 超时后弱化动量]
+    F -- 是 --> H[推进为正式状态 A_*]
+    H --> H1[设置 openLong / openShort]
+    H1 --> H2[记录 hintBarIdx / ftBuyPrice / ftSellPrice]

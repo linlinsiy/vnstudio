@@ -1,0 +1,45 @@
+flowchart TD
+    A[状态机已得到 openLong / openShort / evlMomentum] --> B[写入 TrendBrain.trading]
+    B --> B1[构造 30 维特征]
+    B1 --> B2[价格类 normalize1]
+    B2 --> B3[波动类 normalize2]
+
+    B3 --> C{dnnPredict 是否开启}
+    C -- 否 --> D[仅使用规则动量]
+    C -- 是 --> C1[分别调用 model_td01 / 02 / 03]
+    C1 --> C2[平均得到 furMomentum]
+    C2 --> C3[更新 nearbyHigh / nearbyLow]
+    C3 --> C4[判断 notDoLong / notDoShort]
+    C4 --> C5[必要时设置 dnnTrigger / notOpen / exitBarIdx]
+    C5 --> C6{MomentumPlus 是否开启}
+    C6 -- 否 --> D
+    C6 -- 是 --> C7[计算 calMomentum]
+    C7 --> D
+
+    D --> E{当前是否持仓}
+    E -- 无仓 --> E1{openLong / openShort 是否成立}
+    E1 -- 是 --> E2[开仓]
+    E1 -- 否 --> E3[继续观察]
+
+    E -- 有仓 --> F[判断平仓条件]
+    F --> F1[规则模式: adjPredict / extremeMomentum / stopLoss]
+    F --> F2[复合动量模式: calMomentum / extremeCalMomentum / stopLoss]
+    F1 --> F3{是否需要平仓}
+    F2 --> F3
+    F3 -- 是 --> F4[平仓]
+    F3 -- 否 --> F5[继续持仓, 更新极值动量]
+
+    F4 --> G{是否为 T0 反手状态}
+    G -- 是 --> G1[反手开仓]
+    G -- 否 --> H[若 ActorStatus 不再成立则复位为 0]
+    G1 --> H
+    E2 --> H
+    E3 --> H
+    F5 --> H
+
+    H --> I[保存 PredictData]
+    I --> J[保存 VirtualPos / VirtualTrading]
+    J --> K[保存 TradingInfo]
+    K --> L[保存 StateInfo]
+    L --> M[必要时复位 SignInterface]
+    M --> N[put_event]

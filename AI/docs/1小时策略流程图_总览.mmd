@@ -1,0 +1,20 @@
+flowchart TD
+    A[初始化 on_init] --> B[启动 on_start]
+    B --> C[接收 tick on_tick]
+    C --> D[接收 bar on_bar]
+    D --> E[生成 1 小时 bar on_sixty_bar]
+
+    E --> F[模块 1 启动与 Bar 聚合]
+    E --> G[模块 2 指标轨道与过滤]
+    E --> H[模块 3 状态机与动量]
+    E --> I[模块 4 DNN 过滤与交易执行]
+
+    I --> J[状态保存与事件通知]
+    J --> K[等待下一根小时 bar]
+
+    K --> L[扩展到 15m / 30m]
+    L --> L1[替换主周期 BarGenerator]
+    L --> L2[替换初始化历史粒度]
+    L --> L3[重标定状态阈值与动量阈值]
+    L --> L4[按周期隔离 State / Predict / VirtualPos]
+    L --> L5[加载对应周期模型]
