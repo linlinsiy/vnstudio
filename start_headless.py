@@ -22,6 +22,7 @@ from vnpy.app.cta_strategy import CtaStrategyApp
 from vnpy.app.data_recorder import DataRecorderApp
 
 from safe_mode import enable_read_only_mode
+from sa_weighted_index import SaWeightedIndexEngine
 
 
 def load_json_config(filename: str) -> dict:
@@ -78,6 +79,9 @@ def main():
 
     main_engine.add_gateway(CtpGateway)
     print("[+] CTP gateway loaded")
+
+    main_engine.add_engine(SaWeightedIndexEngine)
+    print("[+] SA_ZS weighted index engine loaded")
 
     cta_engine = main_engine.add_app(CtaStrategyApp)
     recorder_engine = main_engine.add_app(DataRecorderApp)
